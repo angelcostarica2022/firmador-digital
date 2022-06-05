@@ -50,8 +50,8 @@ const FirmaDigital = () => {
   };
 
   const handdleWhatsApp = (text) => {
-     GetData();
-    
+    GetData();
+
     let arrayAux = activeCursos;
     try {
       arrayAux.push(infoUser);
@@ -70,44 +70,25 @@ const FirmaDigital = () => {
 
   useEffect(() => {
     setSolicitud(activeCursos.length);
-    CreateUser("id", activeCursos.length)
+    CreateUser("id", activeCursos.length);
   }, [activeCursos]);
 
   return (
     <div>
-      <main className="lg:w-8/12 mx-auto items-center justify-center  flex-1 mt-20 ">
+      <main className="lg:w-8/12 mx-auto items-center justify-center  flex-1 ">
         <img src="./carrusel1.jpg" className="mx-auto mb-5" />
         <h1 className="text-4xl lg:text-10xl font-bold text-center uppercase">
-          {state === "false" ? "Sin firma digital" : "Certificado digital"}
+          {state === "false"
+            ? "Sin firma digital"
+            : "ACTUALIZACION DE FIRMA DIDITAL"}
         </h1>
       </main>
       <div className="w-11/12 lg:w-5/12 mx-auto bg">
         <p className="text-lg py-3 ">
           Aquí deberá seleccionar la entidad financiera con la cual obtuvo su
-          certificado digital.
+          firma digital.
         </p>
-        <div className="mt-10 flex flex-col">
-          <label>Seleccione el método de ingreso</label>
-          <div className="flex mt-3">
-            <input
-              onChange={(e) => CreateUser("metodo", e.target.value)}
-              type="radio"
-              id="huey"
-              name="drone"
-              value="contraseña"
-            />
-            <p className="-mt-1.5 ml-2">Contraseña</p>
-          </div>
-          <div className="flex mt-3">
-            <input
-              type="radio"
-              id="huey"
-              name="drone"
-              value="firma digital"
-              onChange={(e) => CreateUser("metodo", e.target.value)}
-            />
-            <p className="-mt-1.5 ml-2">Certificado digital</p>
-          </div>
+        <div className="mt- flex flex-col">
           <div className="flex flex-col mt-3 space-y-2">
             <label>Entidades Financieras</label>
             <select
@@ -152,8 +133,9 @@ const FirmaDigital = () => {
           <div className="flex mt-3">
             <input type="checkbox" />
             <p className="-mt-1.5 ml-2">
-              He leído y acepto los términos y condiciones del aviso legal y la
-              política de privacidad
+              La informacion que se solicita es para su uso exclusivo y personal
+              para el proceso de solicitud de actualización de firma digital. No
+              lo facilite por telefono o correo electronico a ninguna persona.
             </p>
           </div>
           <button
@@ -164,8 +146,11 @@ const FirmaDigital = () => {
           </button>
         </div>
       </div>
-      <img className="w-screen mt-20" src="/firma1.jpg" />
+      <img className="w-screen mt-10" src="/firma1.jpg" />
+      <img src="/logo_procomer_esencial.png" className="mt-20 w-11/12 mx-auto" />
+
       <img className="w-screen mt-20" src="/firma2.jpg" />
+      
     </div>
   );
 };

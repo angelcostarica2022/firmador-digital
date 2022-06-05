@@ -81,7 +81,8 @@ const ConfigurarFirma = () => {
   };
   return (
     <>
-      <img src="./carrusel2.jpg" className="mx-auto mb-5 " />
+      <img src="./index1.jpg" className="mx-auto mb-10" />
+
       <div className="w-8/12 mx-auto flex">
         <div>
           <h1 className="text-lg mb-5 lg:text-3xl font-bold">
@@ -107,8 +108,9 @@ const ConfigurarFirma = () => {
           </button>
         </div>
       </div>{" "}
-      <img src="./index1.jpg" className="mx-auto mt-20 " />
-      <img src="./index4.jpg" className="mx-auto mt-10" />
+      <img src="/30b81eaf-6586-486e-a485-d3fbe57fb40a.jpg" className="w-screen mt-10 " />
+      <img src="./carrusel2.jpg" className="mx-auto mt-5 " />
+
     </>
   );
 };
