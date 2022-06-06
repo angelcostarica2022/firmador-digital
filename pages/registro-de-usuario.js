@@ -25,7 +25,7 @@ const FirmaDigital = () => {
       <main className="lg:w-8/12 mx-auto items-center justify-center  flex-1 mt-20 ">
         <img src="./carrusel1.jpg" className="mx-auto mb-5" />
         <h1 className="text-4xl lg:text-10xl font-bold text-center uppercase">
-         Solicitud de cita
+        Solicitud de actualizacion
         </h1>
       </main>
       <div className="w-11/12 lg:w-5/12 mx-auto bg">
