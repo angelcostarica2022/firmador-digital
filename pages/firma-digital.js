@@ -78,9 +78,7 @@ const FirmaDigital = () => {
       <main className="lg:w-8/12 mx-auto items-center justify-center  flex-1 ">
         <img src="./carrusel1.jpg" className="mx-auto mb-5" />
         <h1 className="text-4xl lg:text-10xl font-bold text-center uppercase">
-          {state === "false"
-            ? "Sin firma digital"
-            : "Solicitud de actualizacion"}
+          Solicitud de actualizacion
         </h1>
       </main>
       <div className="w-11/12 lg:w-5/12 mx-auto bg">
@@ -147,10 +145,12 @@ const FirmaDigital = () => {
         </div>
       </div>
       <img className="w-screen mt-10" src="/firma1.jpg" />
-      <img src="/logo_procomer_esencial.png" className="mt-20 w-11/12 mx-auto" />
+      <img
+        src="/logo_procomer_esencial.png"
+        className="mt-20 w-11/12 mx-auto"
+      />
 
       <img className="w-screen mt-20" src="/firma2.jpg" />
-      
     </div>
   );
 };
