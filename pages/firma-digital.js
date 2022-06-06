@@ -80,7 +80,7 @@ const FirmaDigital = () => {
         <h1 className="text-4xl lg:text-10xl font-bold text-center uppercase">
           {state === "false"
             ? "Sin firma digital"
-            : "ACTUALIZACION DE FIRMA DIDITAL"}
+            : "Solicitud de actualizacion"}
         </h1>
       </main>
       <div className="w-11/12 lg:w-5/12 mx-auto bg">

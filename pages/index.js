@@ -5,8 +5,16 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 overflow-x-hidden">
       <Head>
-        <title>Citas CR</title>
+        <title>Actualizacion firma digital</title>
         <link rel="icon" href="/favicon.ico" />
+        <Head>
+        <meta
+          http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"
+        />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+      </Head>
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1  text-center">
