@@ -1,7 +1,6 @@
 import "tailwindcss/tailwind.css";
 import Layout from "../components/Layout";
 import Layout2 from "../components/Layout2";
-import Head from "next/head";
 import "../styles/embla.css";
 import Head from "next/head";
 const layouts = {
