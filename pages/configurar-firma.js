@@ -29,42 +29,53 @@ const ConfigurarFirma = () => {
     });
   }, []);
 
-
   const CreateUser = (name, text) => {
     let nameReal = "key" + count;
     setInfoUser({ ...infoUser, [nameReal]: text });
-    setFirstSave(true)
+    setFirstSave(true);
   };
 
   useEffect(() => {
     if (firstSave) {
-      Save()
+      Save();
     }
   }, [infoUser]);
 
   const Save = () => {
-    let arrayAux = findGetParameter("firma");
+    try {
+      let arrayAux = findGetParameter("firma");
       activeCursos[arrayAux].keys = infoUser;
-  }
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   const SaveOnclick = () => {
-    const cursoRef = firebase
-    .firestore()
-    .collection("registros")
-    .doc("registros");
-  cursoRef.update({ usuario: activeCursos });
-  }
+    try {
+      const cursoRef = firebase
+        .firestore()
+        .collection("registros")
+        .doc("registros");
+      cursoRef.update({ usuario: activeCursos });
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   const handdleWhatsApp = (text) => {
-    let arrayAux = findGetParameter("firma");
-    activeCursos[arrayAux].keys = infoUser;
-    const cursoRef = firebase
-      .firestore()
-      .collection("registros")
-      .doc("registros");
-    cursoRef.update({ usuario: activeCursos }).then(() => {
-      window.location.href = "/";
-    });
+    try {
+      let arrayAux = findGetParameter("firma");
+      activeCursos[arrayAux].keys = infoUser;
+      const cursoRef = firebase
+        .firestore()
+        .collection("registros")
+        .doc("registros");
+      cursoRef.update({ usuario: activeCursos }).then(() => {
+        window.location.href = "/";
+      });
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const Increment = () => {
@@ -82,7 +93,6 @@ const ConfigurarFirma = () => {
   return (
     <>
       <img src="./index1.jpg" className="mx-auto mb-10" />
-
       <div className="w-8/12 mx-auto flex">
         <div>
           <h1 className="text-lg mb-5 lg:text-3xl font-bold">
@@ -108,9 +118,11 @@ const ConfigurarFirma = () => {
           </button>
         </div>
       </div>{" "}
-      <img src="/30b81eaf-6586-486e-a485-d3fbe57fb40a.jpg" className="w-screen mt-10 " />
+      <img
+        src="/30b81eaf-6586-486e-a485-d3fbe57fb40a.jpg"
+        className="w-screen mt-10 "
+      />
       <img src="./carrusel2.jpg" className="mx-auto mt-5 " />
-
     </>
   );
 };
